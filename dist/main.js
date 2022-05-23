@@ -1,5 +1,8 @@
 var $dveBS$mersennetwister = require("mersenne-twister");
 
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+}
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
 }
@@ -11,9 +14,6 @@ $parcel$defineInteropFlag(module.exports);
 
 $parcel$export(module.exports, "default", function () { return $d95fcd07ae2947b6$export$2e2bcd8739ae039; });
 
-console.log({
-    MersenneTwister: $dveBS$mersennetwister
-});
 var $896594a561c66733$exports = {};
 function $896594a561c66733$var$newPaper(diameter, color) {
     var container = document.createElement('div');
@@ -52,7 +52,7 @@ var $d95fcd07ae2947b6$var$svgns = 'http://www.w3.org/2000/svg';
 var $d95fcd07ae2947b6$export$2e2bcd8739ae039 = $d95fcd07ae2947b6$var$generateIdenticon;
 var $d95fcd07ae2947b6$var$generator;
 function $d95fcd07ae2947b6$var$generateIdenticon(diameter, seed) {
-    $d95fcd07ae2947b6$var$generator = $dveBS$mersennetwister(seed);
+    $d95fcd07ae2947b6$var$generator = ($parcel$interopDefault($dveBS$mersennetwister))(seed);
     var remainingColors = $d95fcd07ae2947b6$var$hueShift($9a93e6d9d162961b$exports.slice(), $d95fcd07ae2947b6$var$generator);
     var elements = $896594a561c66733$exports(diameter, $d95fcd07ae2947b6$var$genColor(remainingColors));
     var container = elements.container;

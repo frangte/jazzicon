@@ -1,9 +1,6 @@
-import * as $gVrYk$mersennetwister from "mersenne-twister";
+import $gVrYk$mersennetwister from "mersenne-twister";
 
 
-console.log({
-    MersenneTwister: $gVrYk$mersennetwister
-});
 var $3d842a8badcf6b49$exports = {};
 function $3d842a8badcf6b49$var$newPaper(diameter, color) {
     var container = document.createElement('div');
