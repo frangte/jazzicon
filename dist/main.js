@@ -1,18 +1,5 @@
 var $dveBS$mersennetwister = require("mersenne-twister");
 
-function $parcel$interopDefault(a) {
-  return a && a.__esModule ? a.default : a;
-}
-function $parcel$defineInteropFlag(a) {
-  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
-}
-function $parcel$export(e, n, v, s) {
-  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
-}
-
-$parcel$defineInteropFlag(module.exports);
-
-$parcel$export(module.exports, "default", function () { return $d95fcd07ae2947b6$export$2e2bcd8739ae039; });
 
 var $896594a561c66733$exports = {};
 function $896594a561c66733$var$newPaper(diameter, color) {
@@ -49,10 +36,11 @@ $9a93e6d9d162961b$exports = [
 
 var $d95fcd07ae2947b6$var$shapeCount = 4;
 var $d95fcd07ae2947b6$var$svgns = 'http://www.w3.org/2000/svg';
-var $d95fcd07ae2947b6$export$2e2bcd8739ae039 = $d95fcd07ae2947b6$var$generateIdenticon;
+module.exports = $d95fcd07ae2947b6$var$generateIdenticon;
+// export default generateIdenticon
 var $d95fcd07ae2947b6$var$generator;
 function $d95fcd07ae2947b6$var$generateIdenticon(diameter, seed) {
-    $d95fcd07ae2947b6$var$generator = ($parcel$interopDefault($dveBS$mersennetwister))(seed);
+    $d95fcd07ae2947b6$var$generator = new $dveBS$mersennetwister(seed);
     var remainingColors = $d95fcd07ae2947b6$var$hueShift($9a93e6d9d162961b$exports.slice(), $d95fcd07ae2947b6$var$generator);
     var elements = $896594a561c66733$exports(diameter, $d95fcd07ae2947b6$var$genColor(remainingColors));
     var container = elements.container;

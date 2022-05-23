@@ -1,5 +1,5 @@
 {
-  "name": "@metamask/jazzicon",
+  "name": "@yata/jazzicon",
   "version": "2.1.0",
   "description": "Jazzy deterministic identicons for a more entertaining future",
   "source": "index.js",
