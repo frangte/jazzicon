@@ -1,4 +1,4 @@
-var jazzicon = require('./')
+import jazzicon from './index.js'
 
 var body = document.querySelector('body')
 for(var i = 0; i < 600; i++) {
