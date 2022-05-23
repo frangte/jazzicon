@@ -42,7 +42,7 @@ var $f46d7b2bff0857f2$var$svgns = 'http://www.w3.org/2000/svg';
 var $f46d7b2bff0857f2$export$2e2bcd8739ae039 = $f46d7b2bff0857f2$var$generateIdenticon;
 var $f46d7b2bff0857f2$var$generator;
 function $f46d7b2bff0857f2$var$generateIdenticon(diameter, seed) {
-    $f46d7b2bff0857f2$var$generator = new $gVrYk$mersennetwister(seed);
+    $f46d7b2bff0857f2$var$generator = $gVrYk$mersennetwister(seed);
     var remainingColors = $f46d7b2bff0857f2$var$hueShift($57dc0110dd32ca47$exports.slice(), $f46d7b2bff0857f2$var$generator);
     var elements = $3d842a8badcf6b49$exports(diameter, $f46d7b2bff0857f2$var$genColor(remainingColors));
     var container = elements.container;
