@@ -1,8 +1,9 @@
-var $dveBS$mersennetwister = require("mersenne-twister");
+import $gVrYk$mersennetwister from "mersenne-twister";
 
+var $f46d7b2bff0857f2$exports = {};
 
-var $896594a561c66733$exports = {};
-function $896594a561c66733$var$newPaper(diameter, color) {
+var $3d842a8badcf6b49$exports = {};
+function $3d842a8badcf6b49$var$newPaper(diameter, color) {
     var container = document.createElement('div');
     container.style.borderRadius = '50px';
     container.style.overflow = 'hidden';
@@ -16,11 +17,11 @@ function $896594a561c66733$var$newPaper(diameter, color) {
         container: container
     };
 }
-$896594a561c66733$exports = $896594a561c66733$var$newPaper;
+$3d842a8badcf6b49$exports = $3d842a8badcf6b49$var$newPaper;
 
 
-var $9a93e6d9d162961b$exports = {};
-$9a93e6d9d162961b$exports = [
+var $57dc0110dd32ca47$exports = {};
+$57dc0110dd32ca47$exports = [
     '#01888C',
     '#FC7500',
     '#034F5D',
@@ -34,71 +35,70 @@ $9a93e6d9d162961b$exports = [
 ];
 
 
-var $d95fcd07ae2947b6$var$shapeCount = 4;
-var $d95fcd07ae2947b6$var$svgns = 'http://www.w3.org/2000/svg';
-module.exports = $d95fcd07ae2947b6$var$generateIdenticon;
+var $f46d7b2bff0857f2$var$shapeCount = 4;
+var $f46d7b2bff0857f2$var$svgns = 'http://www.w3.org/2000/svg';
+$f46d7b2bff0857f2$exports = $f46d7b2bff0857f2$var$generateIdenticon;
 // export default generateIdenticon
-var $d95fcd07ae2947b6$var$generator;
-function $d95fcd07ae2947b6$var$generateIdenticon(diameter, seed) {
-    $d95fcd07ae2947b6$var$generator = new $dveBS$mersennetwister(seed);
-    var remainingColors = $d95fcd07ae2947b6$var$hueShift($9a93e6d9d162961b$exports.slice(), $d95fcd07ae2947b6$var$generator);
-    var elements = $896594a561c66733$exports(diameter, $d95fcd07ae2947b6$var$genColor(remainingColors));
+var $f46d7b2bff0857f2$var$generator;
+function $f46d7b2bff0857f2$var$generateIdenticon(diameter, seed) {
+    $f46d7b2bff0857f2$var$generator = new $gVrYk$mersennetwister(seed);
+    var remainingColors = $f46d7b2bff0857f2$var$hueShift($57dc0110dd32ca47$exports.slice(), $f46d7b2bff0857f2$var$generator);
+    var elements = $3d842a8badcf6b49$exports(diameter, $f46d7b2bff0857f2$var$genColor(remainingColors));
     var container = elements.container;
-    var svg = document.createElementNS($d95fcd07ae2947b6$var$svgns, 'svg');
+    var svg = document.createElementNS($f46d7b2bff0857f2$var$svgns, 'svg');
     svg.setAttributeNS(null, 'x', '0');
     svg.setAttributeNS(null, 'y', '0');
     svg.setAttributeNS(null, 'width', diameter);
     svg.setAttributeNS(null, 'height', diameter);
     container.appendChild(svg);
-    for(var i = 0; i < $d95fcd07ae2947b6$var$shapeCount - 1; i++)$d95fcd07ae2947b6$var$genShape(remainingColors, diameter, i, $d95fcd07ae2947b6$var$shapeCount - 1, svg);
+    for(var i = 0; i < $f46d7b2bff0857f2$var$shapeCount - 1; i++)$f46d7b2bff0857f2$var$genShape(remainingColors, diameter, i, $f46d7b2bff0857f2$var$shapeCount - 1, svg);
     return container;
 }
-function $d95fcd07ae2947b6$var$genShape(remainingColors, diameter, i, total, svg) {
+function $f46d7b2bff0857f2$var$genShape(remainingColors, diameter, i, total, svg) {
     var center = diameter / 2;
-    var shape = document.createElementNS($d95fcd07ae2947b6$var$svgns, 'rect');
+    var shape = document.createElementNS($f46d7b2bff0857f2$var$svgns, 'rect');
     shape.setAttributeNS(null, 'x', '0');
     shape.setAttributeNS(null, 'y', '0');
     shape.setAttributeNS(null, 'width', diameter);
     shape.setAttributeNS(null, 'height', diameter);
-    var firstRot = $d95fcd07ae2947b6$var$generator.random();
+    var firstRot = $f46d7b2bff0857f2$var$generator.random();
     var angle = Math.PI * 2 * firstRot;
-    var velocity = diameter / total * $d95fcd07ae2947b6$var$generator.random() + i * diameter / total;
+    var velocity = diameter / total * $f46d7b2bff0857f2$var$generator.random() + i * diameter / total;
     var tx = Math.cos(angle) * velocity;
     var ty = Math.sin(angle) * velocity;
     var translate = 'translate(' + tx + ' ' + ty + ')';
     // Third random is a shape rotation on top of all of that.
-    var secondRot = $d95fcd07ae2947b6$var$generator.random();
+    var secondRot = $f46d7b2bff0857f2$var$generator.random();
     var rot = firstRot * 360 + secondRot * 180;
     var rotate = 'rotate(' + rot.toFixed(1) + ' ' + center + ' ' + center + ')';
     var transform = translate + ' ' + rotate;
     shape.setAttributeNS(null, 'transform', transform);
-    var fill = $d95fcd07ae2947b6$var$genColor(remainingColors);
+    var fill = $f46d7b2bff0857f2$var$genColor(remainingColors);
     shape.setAttributeNS(null, 'fill', fill);
     svg.appendChild(shape);
 }
-function $d95fcd07ae2947b6$var$genColor(colors) {
-    var rand = $d95fcd07ae2947b6$var$generator.random();
-    var idx = Math.floor(colors.length * $d95fcd07ae2947b6$var$generator.random());
+function $f46d7b2bff0857f2$var$genColor(colors) {
+    var rand = $f46d7b2bff0857f2$var$generator.random();
+    var idx = Math.floor(colors.length * $f46d7b2bff0857f2$var$generator.random());
     var color = colors.splice(idx, 1)[0];
     return color;
 }
-var $d95fcd07ae2947b6$var$wobble = 30;
-function $d95fcd07ae2947b6$var$hueShift(colors, generator) {
-    var amount = generator.random() * 30 - $d95fcd07ae2947b6$var$wobble / 2;
-    var rotate = function(hex) {
-        return $d95fcd07ae2947b6$var$colorRotate(hex, amount);
-    };
+var $f46d7b2bff0857f2$var$wobble = 30;
+function $f46d7b2bff0857f2$var$hueShift(colors, generator) {
+    var amount = generator.random() * 30 - $f46d7b2bff0857f2$var$wobble / 2;
+    var rotate = (hex)=>$f46d7b2bff0857f2$var$colorRotate(hex, amount)
+    ;
     return colors.map(rotate);
 }
-function $d95fcd07ae2947b6$var$colorRotate(hex, degrees) {
-    var hsl = $d95fcd07ae2947b6$var$hexToHSL(hex);
+function $f46d7b2bff0857f2$var$colorRotate(hex, degrees) {
+    var hsl = $f46d7b2bff0857f2$var$hexToHSL(hex);
     var hue = hsl.h;
     hue = (hue + degrees) % 360;
     hue = hue < 0 ? 360 + hue : hue;
     hsl.h = hue;
-    return $d95fcd07ae2947b6$var$HSLToHex(hsl);
+    return $f46d7b2bff0857f2$var$HSLToHex(hsl);
 }
-function $d95fcd07ae2947b6$var$hexToHSL(hex) {
+function $f46d7b2bff0857f2$var$hexToHSL(hex) {
     // Convert hex to RGB first
     var r = "0x" + hex[1] + hex[2];
     var g = "0x" + hex[3] + hex[4];
@@ -124,11 +124,11 @@ function $d95fcd07ae2947b6$var$hexToHSL(hex) {
         l: l
     };
 }
-function $d95fcd07ae2947b6$var$HSLToHex(hsl) {
-    var h = hsl.h, s = hsl.s, l = hsl.l;
+function $f46d7b2bff0857f2$var$HSLToHex(hsl) {
+    var { h: h , s: s , l: l  } = hsl;
     s /= 100;
     l /= 100;
-    var c = (1 - Math.abs(2 * l - 1)) * s, x = c * (1 - Math.abs(h / 60 % 2 - 1)), m = l - c / 2, r = 0, g = 0, b = 0;
+    let c = (1 - Math.abs(2 * l - 1)) * s, x = c * (1 - Math.abs(h / 60 % 2 - 1)), m = l - c / 2, r = 0, g = 0, b = 0;
     if (0 <= h && h < 60) {
         r = c;
         g = x;
@@ -166,4 +166,5 @@ function $d95fcd07ae2947b6$var$HSLToHex(hsl) {
 }
 
 
-//# sourceMappingURL=main.js.map
+export {$f46d7b2bff0857f2$exports as default};
+//# sourceMappingURL=module.mjs.map

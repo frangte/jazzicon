@@ -1,4 +1,5 @@
-var MersenneTwister = require('mersenne-twister');
+// var MersenneTwister = require('mersenne-twister');
+import MersenneTwister from 'mersenne-twister'
 var paperGen = require('./paper')
 var colors = require('./colors')
 var shapeCount = 4
