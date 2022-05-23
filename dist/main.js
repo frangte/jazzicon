@@ -11,6 +11,9 @@ $parcel$defineInteropFlag(module.exports);
 
 $parcel$export(module.exports, "default", function () { return $d95fcd07ae2947b6$export$2e2bcd8739ae039; });
 
+console.log({
+    MersenneTwister: $dveBS$mersennetwister
+});
 var $896594a561c66733$exports = {};
 function $896594a561c66733$var$newPaper(diameter, color) {
     var container = document.createElement('div');
