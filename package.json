@@ -2,8 +2,12 @@
   "name": "@metamask/jazzicon",
   "version": "2.1.0",
   "description": "Jazzy deterministic identicons for a more entertaining future",
-  "main": "index.js",
+  "source": "index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
   "scripts": {
+    "build": "parcel build",
+    "dev": "parcel watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "beefy sample.js --live --open"
   },
@@ -18,7 +22,10 @@
   "dependencies": {
     "mersenne-twister": "^1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  },
+  "browserslist": "> 0.25%",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MetaMask/jazzicon.git"

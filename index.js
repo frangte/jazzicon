@@ -5,6 +5,7 @@ var shapeCount = 4
 var svgns = 'http://www.w3.org/2000/svg'
 
 module.exports = generateIdenticon
+export default generateIdenticon
 
 var generator
 function generateIdenticon(diameter, seed) {
