@@ -1047,7 +1047,7 @@ mdn-data@2.0.14:
 
 "mersenne-twister@https://github.com/frangte/mersenne-twister.git":
   version "1.1.0"
-  resolved "https://github.com/frangte/mersenne-twister.git#7078604dd9b135a785a663c5873b2f8fc1d5913d"
+  resolved "https://github.com/frangte/mersenne-twister.git#857bd0ec6d59f81f4759284d5c24d4e2efb3cb6a"
 
 msgpackr-extract@^2.0.2:
   version "2.0.2"

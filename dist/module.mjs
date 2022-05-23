@@ -1,6 +1,16 @@
 import $gVrYk$mersennetwister from "mersenne-twister";
 
+function $parcel$defineInteropFlag(a) {
+  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
+}
+function $parcel$export(e, n, v, s) {
+  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
+}
 var $f46d7b2bff0857f2$exports = {};
+
+$parcel$defineInteropFlag($f46d7b2bff0857f2$exports);
+
+$parcel$export($f46d7b2bff0857f2$exports, "default", function () { return $f46d7b2bff0857f2$export$2e2bcd8739ae039; }, function (v) { return $f46d7b2bff0857f2$export$2e2bcd8739ae039 = v; });
 
 var $3d842a8badcf6b49$exports = {};
 function $3d842a8badcf6b49$var$newPaper(diameter, color) {
@@ -38,7 +48,7 @@ $57dc0110dd32ca47$exports = [
 var $f46d7b2bff0857f2$var$shapeCount = 4;
 var $f46d7b2bff0857f2$var$svgns = 'http://www.w3.org/2000/svg';
 $f46d7b2bff0857f2$exports = $f46d7b2bff0857f2$var$generateIdenticon;
-// export default generateIdenticon
+var $f46d7b2bff0857f2$export$2e2bcd8739ae039 = $f46d7b2bff0857f2$var$generateIdenticon;
 var $f46d7b2bff0857f2$var$generator;
 function $f46d7b2bff0857f2$var$generateIdenticon(diameter, seed) {
     $f46d7b2bff0857f2$var$generator = new $gVrYk$mersennetwister(seed);
@@ -166,5 +176,5 @@ function $f46d7b2bff0857f2$var$HSLToHex(hsl) {
 }
 
 
-export {$f46d7b2bff0857f2$exports as default};
+export {$f46d7b2bff0857f2$exports as default, $f46d7b2bff0857f2$export$2e2bcd8739ae039 as default};
 //# sourceMappingURL=module.mjs.map
